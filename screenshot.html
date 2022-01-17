@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>take screenshot using JavaScript</title>
+  
+    <!-- Include from the CDN -->
+    <script src=
+"https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+    </script>
+  
+    <!-- Include locally otherwise -->
+    <!-- <script src='html2canvas.js'></script> -->
+  
+    <style>
+        #photo {
+            border: 4px solid green;
+            padding: 4px;
+        }
+    </style>
+</head>
+  
+<body>
+    <iframe id="photo" src="https://tailwindcss.com"></iframe>
+    <button onclick="takeshot()">Take Screenshot</button>
+    <h1>Screenshot:</h1>
+    <div id="output"></div>
+  
+    <script type="text/javascript">
+  
+        // Define the function 
+        // to screenshot the div
+        function takeshot() {
+            let div =
+                document.getElementById('photo');
+  
+            // Use the html2canvas
+            // function to take a screenshot
+            // and append it
+            // to the output div
+            html2canvas(div).then(
+                function (canvas) {
+                    document
+                    .getElementById('output')
+                    .appendChild(canvas);
+                })
+        }
+    </script>
+</body>
+  
+</html>

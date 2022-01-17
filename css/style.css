@@ -1,0 +1,12 @@
+body{
+	font-size: 15px;
+	color: #000;
+	background-color: #fff;
+	/*google fonts*/
+	font-family: 'Nunito Sans', sans-serif;
+}
+.clear{clear: both;}
+#jssection h1{
+	font-size: 50px;
+	text-transform: uppercase;
+}
